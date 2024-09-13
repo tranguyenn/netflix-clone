@@ -1,5 +1,24 @@
+:root {
+  left: 0;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+#root{
+
+}
+body{
+  background-color: black;
+  margin: 0;
+}
 .App {
   text-align: center;
+  font-family: sans-serif;
+  background-color: black;
 }
 
 .App-logo {
@@ -13,26 +32,82 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.login-container-styled-background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./image/login-background.jpg');
+}
+
+.login-container {
+ background-color: rgba(0, 0, 0, 0.6);
+}
+
+.login-form{
+  margin: auto;
+  width: 40vw; 
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.login-form>h1,#login-title {
+  font-weight: bold;
+  font-size: 40px;
+}
+.login-form>h2{
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.username-input, .password-input{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  font-size: 16px;
+  border: none;
+  color: aliceblue;
+}
+
+.username-input label, .password-input label{
+  font-weight: bolder;
+  font-size: 20px;
+  color: aliceblue;
+}
+.username-input input, .password-input input, .password-input button{
+  font-size: 16px;
+  color: aliceblue;
+}
+.button-red{
+  background-color: rgb(229, 9, 20) !important;
+  color: aliceblue !important;
+  font-weight: bolder !important;
+}
+
+.sign-in-button{
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.header-container{
+  position: absolute;
+  z-index: 2;
+  width: 100vw !important;
+}
+#header-appbar{
+  background-color: transparent;
+  box-shadow: none;
+
+}
+.paging-section{
+  color: aliceblue !important;
+}
+.paging-item{
+  color: aliceblue !important;
+  font-size: 20px !important;
+}
+.sign-in-btn{
+  position: relative;
+  left: 100%;
 }

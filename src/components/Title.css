@@ -1,0 +1,13 @@
+.logo-container{
+    width:110px;
+    display: flex;
+    max-width: 150px;
+    justify-content: center;
+}
+.logo-container img{
+    margin-left: 10px;
+    padding-left: 10px;
+   width: 27vw;
+   max-width: 120px;
+  object-fit: fill;
+}

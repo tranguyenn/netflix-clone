@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes";
+import "./App.css";
+import CarouselFilm from "./components/CarouselFilm";
+import FilmCard from "./components/FilmCard";
+import MovieList from "./components/MovieList";
+import MoviePaging from "./components/MoviePaging";
+import Title from "./components/Title";
+import TopFilmSlide from "./components/TopFilmSlide";
+
+import HeaderLogged from "./layouts/HeaderLogged";
+import MainHeader from "./layouts/MainHeader";
+import DetailPage from "./pages/DetailPage";
+import Homes from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <AuthProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AuthProvider>
     </div>
   );
 }
